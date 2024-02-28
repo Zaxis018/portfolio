@@ -21,7 +21,7 @@
                 <a href="#About" style="--i:2">About</a>
                 <a href="#Skills" style="--i:3">Skills</a>
                 <a href="#Projects" style="--i:4">Projects</a>
-                <a href="#Contact" style="--i:5">Contact</a>
+                <a href="#contacts" style="--i:5">Contact</a>
             </nav>
         </header>
 
@@ -226,29 +226,54 @@
         </section>
 
 
-        <section class="contacts" id="Contact">
+
+        <!-- <div class="email">
+            <form>
+                <input type="text",id="name" placeholder="Your Name" required>
+                <input type="email",id="email" placeholder="Email id" required>
+                <input type="text",id="phone" placeholder="Phone number" required>
+                <textarea id="message" rows="5" placeholder="Your message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div> -->
+
+        <section id="contacts">  
             <div class="contact-text">
                 <h2>Contact <span>Me</span></h2>
-                <div class="contact-list">
-                    <li><i class='bx bxs-send'></i>kshitizpoudel18@gmail.com</li>
-                    <li><i class="bx bxs-phone-call" ></i>+977 9862547949</li>
-                </div>
-                <div class="contact-icons" style="margin-left: 10%;">
-                    <a href="https://github.com/Zaxis018" target="_blank"><i class='bx bxl-github'></i></a>
-                    <a href="https://github.com/Zaxis018"><i class='bx bxl-youtube'></i></a>
-                    <a href="https://gmail.com" target="_blank"><i class="bx bxl-gmail"></i></a>
-                    <a href="https://www.linkedin.com/in/kshitiz-poudel-82750a269/" target="_blank"><i class="bx bxl-linkedin"></i></a>
-                </div>
             </div>
-            
+            <div class="email">
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <input type="text",id="name" placeholder="Your Name" required>
+                    <input type="email",id="emailid" placeholder="Email id" required>
+                    <input type="text",id="phone" placeholder="Phone number" required>
+                    <textarea id="message" rows="5" placeholder="Your message"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
         </section>
-        
+
         <div class="last-text">
             <p style="text-align:center;">Copyright<i class='bx bx-copyright' style="color: white; "></i> 2024 </p>
         </div>
         <a href="#Home" class="top"><i class='bx bx-up-arrow-alt' ></i></a>
-
-        <script src="./files/script.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail()
+            {
+                Email.send({
+                Host : "smtp.gmail.com",
+                Username : "kshitizpoudel18@gmail,com",
+                Password : "password",
+                To : 'kshitizpoudel18@gmail.com',
+                From : document.getElementById("emailid").value,
+                Subject : "New Contact Form Enquiry",
+                Body : "And this is the body"
+            }).then(
+            message => alert(message)
+            );
+            }
+        </script>
+         <script src="./files/script.js"></script>
     </body>  
 </html>
 

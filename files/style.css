@@ -701,7 +701,7 @@ body {
 /*contacts*/
 
 .contacts {
-    display: grid;
+    display: flex;
     /*grid-template-columns: repeat (2, 1fr);*/
     align-items: center;
     gap: 3rem;
@@ -733,12 +733,7 @@ body {
     font-weight: 600;
 }
 
-/*.contact-text p{
-    color: rgb(177, 177, 177);
-    font-size: 20px;
-    line-height: 30px;
-    margin-bottom: 2rem;
-}*/
+
 .contact-list {
     margin-bottom: 3rem;
 }
@@ -1290,3 +1285,55 @@ body {
         transform: rotate(360deg);
     }
 }
+
+.email{
+    justify-content: center;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items:center;
+    /* height:100vh; */
+}
+form{
+background:black;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    padding:2vw 4vw;
+    width:70%;
+    max-width:500px;
+    border-radius: 10px;
+}
+
+form h3{
+    color:#08304b;
+    font-weight: 800;
+    margin-bottom:20px
+}
+form input,form textarea{
+    margin:10px 0;
+    padding:20px;
+    color: aliceblue;
+    border-width: 2px;
+    border-color: cyan;
+    border-radius: 10px;
+    background:#081b29;
+    font-size:16px;   
+}
+
+form button{
+    padding:15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size :18px;
+    border-color: cyan;
+    border-width:2px;
+    background-color: #0cb4cb;
+
+    transition: all 0.2s ease-in-out; /* Smooth transition on hover */
+}
+form button:hover {
+    color: rgba(255, 255, 255, 1); /* Bright white text on hover */
+    box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4); /* Glowing effect */
+}
+
